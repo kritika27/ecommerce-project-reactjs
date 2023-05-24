@@ -1,6 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:display=swap');
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
 body{
   font-family: 'Roboto Slab', serif;
+}
+
+a{
+  text-decoration: none;
+  color:#333;
+  font-weight: bold;
 }
 nav{
   background-color: #fff;
@@ -8,7 +21,7 @@ nav{
   display:flex;
   justify-content: space-between;
   align-items: center;
-  padding-right: 2rem;
+  padding: 0 2rem 0 2rem;
 }
 
 ul{
@@ -44,39 +57,22 @@ nav>h1{
 .box{
   width:30vw;
 }
- button{
+ .btn{
    background-color: #333;
    color:#fff;
    cursor: pointer;
    padding:15px;
    letter-spacing: 1px;
+   font-weight: bold;
+   font-size: 16px;
  }
 .pic{
-  /* background-image: url("../public/dom-hill-nimElTcTNyY-unsplash.jpg"); */
  background-image: url("../public/vino-tri-mulia-bZDTVuDH38M-unsplash.jpg");
- /* background-image: url("../public/laura-chouette-6UxrwcorLZU-unsplash.jpg"); */
  background-size: cover;
   background-position: cover;
   background-repeat:no-repeat;
   width:55vw;
   height:90vh;
-  
-}
-
-.dress{
-  position: absolute;
-  width:30vw;
-  height:65vh;
-  object-fit:initial;
-    /* position: absolute; */
-  margin: auto;
-  left: 0;
-  right: 0;
-  bottom:0;
-  text-align: center;
-  z-index: 1;
-  /* bottom:0;
-  right:150; */
 }
 
 .about{
@@ -97,6 +93,11 @@ nav>h1{
 
 .about-content>h1, .featured-content>h1{
   font-size:60px;
+  margin-bottom:30px;
+}
+
+.featured-content>h1{
+  color:#444;
 }
 
 .about-content>p{
@@ -117,7 +118,102 @@ nav>h1{
   justify-content: center;
   align-items: center;
   height:100%;
-  width:45vw;
   margin: 0 auto;
   text-align: center;
+}
+
+/* Footer */
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+}
+
+.footer .fa {
+  color: #fff;
+}
+
+.footer a:hover {
+  color: #28a745;
+}
+
+.footer .social > * {
+  margin-right: 30px;
+}
+.bg-dark{
+  background: #020024;
+}
+.footer p{
+  text-align:center;
+  color:#fff;
+}
+
+.flex-items img{
+  width:100%;
+  height:100%;
+  object-fit: cover;
+}
+
+ .footer > .fa{
+  color:#fff;
+}
+
+.review{
+  background-color:#fff;
+  height:100vh;
+  display:flex;
+  flex-direction: row-reverse;
+}
+.review-pic{
+  background-image: url("../public/lance-reis-5KCMWkc8vIo-unsplash.jpg");
+ background-size: cover;
+  background-position: cover;
+  background-repeat:no-repeat;
+  width:50vw;
+  height:100vh;
+}
+
+.review-content{
+  width:50vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: left;
+  height:100%;
+  
+}
+.review-box{
+  width:35vw;
+}
+
+.amount-btns {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  width:45vw;
+}
+.amount-btn {
+  background: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  padding: 1rem 0;
+  width: 2rem;
+  height: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prod > .fa-minus,.fa-plus,.amount{
+  color:#333;
+}
+.fa-minus{
+  margin-right: 3rem;
+}
+.fa-plus{
+  margin-left: 3rem;
 }

@@ -8,7 +8,7 @@ export const About = () => {
     <p>Vestibulum ut arcu non elit finibus volutpat ut eu ipsum.Lorem ipsum dolor sit amet, consectetur adipiscing elit.
          Vestibulum ut arcu non elit finibus volutpat ut eu ipsum.
           Fusce finibus libero nec ligula sagittis, ac efficitur urna faucibus. Duis vestibulum fermentum lacus, sed efficitur arcu tempor eget.Vestibulum ut arcu non elit finibus volutpat ut eu ipsum.</p>
-    <button>Learn More</button>
+    <button className='btn'>Learn More</button>
     </div>
     </div>
   )
