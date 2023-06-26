@@ -1,11 +1,11 @@
-import React from "react";
+import React,{lazy,Suspense} from "react";
 import {  Routes, Route } from "react-router-dom";
-import {Shoes} from "./pages/Shoes";
-import { Cart } from "./pages/Cart";
-import { SingleShoe } from "./pages/SingleShoe";
 import { Navbar} from "./Navbar/Navbar";
 import { Hero } from "./pages/Hero";
-// import { Footer } from "./Footer";
+import { Shoes } from "./pages/Shoes";
+import { Cart } from "./pages/Cart";
+import { SingleShoe } from "./pages/SingleShoe";
+import Favorites from "./pages/Fav";
 
 export const App=()=>{
 
@@ -13,32 +13,48 @@ export const App=()=>{
     <>
       <Navbar/>
       <Routes>
-<Route path="/" element={<Hero/>} />
-<Route path="/products" element={<Shoes/>}/>
-<Route path="/cart" element={<Cart/>}/>
-<Route path="/products/:id" element={<SingleShoe/>}/>
+<Route 
+path="/" 
+ element={
+  <Suspense>
+    <Hero />
+  </Suspense>
+}
+ />
+ <Route 
+path="/products" 
+ element={
+  <Suspense>
+    <Shoes />
+  </Suspense>
+}
+ />
+ <Route 
+path="/cart" 
+ element={
+  <Suspense>
+    <Cart />
+  </Suspense>
+}
+ />
+ <Route 
+path="/products/:id" 
+ element={
+  <Suspense>
+    <SingleShoe />
+  </Suspense>
+}
+ />
+ <Route 
+path="/fav" 
+ element={
+  <Suspense>
+    <Favorites />
+  </Suspense>
+}
+ />
       </Routes>
-      {/* <Footer/> */}
+    
       </>
   )
 }
-
-// import './App.css';
-// import { Navbar } from './Navbar/Navbar';
-// import { Home } from './Home';
-// import { About } from './About';
-// import { Featured } from './Featured';
-// import { Footer } from './Footer';
-// function App() {
-//   return (
-//     <>
-//      <Navbar/>
-//      <Home/>
-//      <About/>
-//      <Featured/>
-//      <Footer/>
-//     </>
-//   );
-// }
-
-// export default App;

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 export const Shoes = () => {
 
   const { amount, product,inc,dec }=useGlobalContext();
-  const { add } =useCartContext();
+  const { add,favorite } =useCartContext();
 
   return (
     <div className='products'>
@@ -23,6 +23,7 @@ export const Shoes = () => {
                 style={{width:"25vw",height:"65vh"}}
                 />
                 </Link>
+                <button onClick={()=>favorite(el.id,el)}>Add To Favorites</button>
                 {/* <h2>{el.name}</h2>
                 {
                   el.size.map((size,index)=>{

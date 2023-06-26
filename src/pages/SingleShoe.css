@@ -117,3 +117,11 @@ margin-right:18px;
       hr{
         width:45vw;
       }
+
+      .fa-arrow-left
+      {
+          margin-top: 0.5rem;
+          margin-bottom:1rem;
+          color:grey;
+          cursor:pointer;
+      }

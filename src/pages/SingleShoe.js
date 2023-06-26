@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { useGlobalContext } from '../context';
 import "./SingleShoe.css";
 import { useCartContext } from '../cart_context';
+import { NavLink } from 'react-router-dom';
 
 export const SingleShoe = () => {
   const { id } = useParams();
@@ -19,7 +20,7 @@ export const SingleShoe = () => {
         const { name, price, description, stock, image } = products;
         return (
           <div className="product-center" key={products.id}>
-            
+           
               <ul className='prod'>
              <li> <i className="fa fa-facebook fa-2x"></i></li>
           <li><i className="fa fa-twitter fa-2x"></i></li>
@@ -29,6 +30,7 @@ export const SingleShoe = () => {
               
             <img className="prod-photo" src={image} alt={name} />
             <section className="content-prod">
+           
             <h1 style={{color:"#333",fontSize:"35px",marginBottom:"1rem"}}>{name}</h1>
             
               <h2 className="price-prod">${price}</h2>
@@ -86,6 +88,7 @@ export const SingleShoe = () => {
       </button>
       
     </div> 
+    <NavLink to="/products"><i title="Go Back" className="fa fa-arrow-left fa-2x"></i></NavLink>
             </section>
              
 

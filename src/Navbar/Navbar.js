@@ -15,6 +15,9 @@ export const Navbar = () => {
         <h1>TRENDS</h1>
         <ul>
             <li>Login</li>
+            <NavLink to="/fav">
+            <li>Fav</li>
+            </NavLink>
            <NavLink to="/cart">
             <li>Cart</li>
             </NavLink>

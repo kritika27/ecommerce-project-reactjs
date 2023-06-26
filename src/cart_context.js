@@ -53,11 +53,26 @@ const reducer=(state,action)=>{
         const newItem=state.cart.filter(el=>el.id!==action.payload)
         return {...state,cart:newItem}
     }
+    else if(action.type==="FAV")
+    {
+        const {id,product}=action.payload;
+        
+            const item={
+                id,
+                name:product.name,
+                price:product.price,
+                amount:product.amount,
+                image:product.image
+            }
+            return {...state,fav:[...state.fav,item]}
+        }
+    
     return state;
 }
 
 const initialState={
     cart:[],
+    fav:[],
     total:0
 }
 
@@ -84,8 +99,12 @@ const CartProvider=({children})=>{
     const clear=()=>{
         dispatch({type:"CLEAR"});
     }
+
+    const favorite=(id,product)=>{
+        dispatch({type:"FAV",payload:{id,product}})
+    }
     return(
-        <CartContext.Provider value={{...state,del,add,clear,incProd,decProd}}>
+        <CartContext.Provider value={{...state,del,add,clear,incProd,decProd,favorite}}>
             {children}
         </CartContext.Provider>
     )
